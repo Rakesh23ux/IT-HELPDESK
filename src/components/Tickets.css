@@ -1,0 +1,86 @@
+/* ===== Common Section Styling ===== */
+.ticket-section {
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.ticket-section:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  font-size: 1.6rem;
+}
+
+/* ===== Pending Theme ===== */
+.pending-theme {
+  background: linear-gradient(180deg, #fff0f0, #ffeaea, #ffffff);
+  border-top: 6px solid #dc3545;
+}
+
+/* ===== Resolved Theme ===== */
+.resolved-theme {
+  background: linear-gradient(180deg, #f3fff4, #e9fbee, #ffffff);
+  border-top: 6px solid #28a745;
+}
+
+/* ===== Table Styling ===== */
+.ticket-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ticket-table thead {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.pending-theme .ticket-table thead {
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+}
+
+.resolved-theme .ticket-table thead {
+  background: linear-gradient(90deg, #28a745, #5dd36b);
+}
+
+.ticket-table tbody tr {
+  transition: all 0.2s ease-in-out;
+}
+
+.ticket-table tbody tr:hover {
+  background-color: rgba(255, 240, 240, 0.5);
+  transform: scale(1.01);
+}
+
+/* ===== Buttons ===== */
+.view-btn {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* ===== Scrollbars ===== */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff6b6b, #dc3545);
+  border-radius: 5px;
+}

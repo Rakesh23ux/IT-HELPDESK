@@ -244,7 +244,6 @@ function Services() {
                 <ul className="text-start mt-3 small text-muted">
                   <li>Machine learning for anomaly detection.</li>
                   <li>Automated ticket triage and intelligent routing.</li>
-                  <li>Knowledge base with guided workflows and FAQs.</li>
 
                 </ul>
               </div>
@@ -311,6 +310,8 @@ function Services() {
                 <ul className="text-start mt-3 small text-muted">
                   <li>24/7 helpdesk with chat, voice, and email support.</li>
                   <li>Remote troubleshooting and self-service portals.</li>
+                  <li>Knowledge base with guided workflows and FAQs.</li>
+
                 </ul>
               </div>
             </div>
