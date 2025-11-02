@@ -66,60 +66,7 @@ function Sidebar({ activeLink, setActiveLink }) {
   );
 }
 
-// Ticket Table Component
-function TicketTable({ tickets, title, onView }) {
-  return (
-    <div className="mb-5">
-      <h3 className="fw-bold text-center mb-3">{title}</h3>
-      <div className="table-responsive">
-        <table className="table table-striped align-middle">
-          <thead>
-            <tr>
-              <th className="bg-black text-success">ID</th>
-              <th className="bg-black text-warning">Title</th>
-              <th className="bg-black text-warning">Description</th>
-              <th className="bg-black text-white">🟢 Status</th>
-              <th className="bg-black text-white">📊 Priority</th>
-              <th className="bg-black text-white">❗ Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tickets.map((ticket) => (
-              <tr key={ticket.id}>
-                <td>{ticket.id}</td>
-                <td className="text-danger fw-semibold">{ticket.title}</td>
-                <td>{ticket.desc}</td>
-                <td>
-                  <span className="badge bg-success">{ticket.status}</span>
-                </td>
-                <td>
-                  <span
-                    className={`badge ${ticket.priority === "High"
-                      ? "bg-danger"
-                      : ticket.priority === "Medium"
-                        ? "bg-warning text-dark"
-                        : "bg-secondary"
-                      }`}
-                  >
-                    {ticket.priority}
-                  </span>
-                </td>
-                <td>
-                  <button
-                    className="btn btn-outline-dark rounded-pill px-3 py-1"
-                    onClick={() => onView(ticket)}
-                  >
-                    👁 View
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
+
 
 // Main Dashboard Component
 function Dashboard() {
