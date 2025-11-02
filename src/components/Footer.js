@@ -47,7 +47,7 @@ function Footer() {
               </a>
             </p>
             <p>
-              <i className="fa fa-phone me-2 text-danger"></i>0822-277-1234
+              <i className="fa fa-phone me-2 text-danger"></i>0822-274-1234
             </p>
           </div>
 
