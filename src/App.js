@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 
