@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
+import PendingTickets from "./components/PendingTickets";
 
 // Layout wrapper to hide header/footer on specific pages
 function Layout() {
@@ -42,12 +43,14 @@ function Layout() {
         {/*  Auth & Admin Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/PendingTickets" element={<PendingTickets />} />
       </Routes>
 
       {!hideHeaderFooter && <Footer />}
     </>
   );
 }
+
 
 function App() {
   return (

@@ -15,7 +15,7 @@ function About() {
       id="about"
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(185deg, #ecf3efc4, #000000ff )",
+        background: "linear-gradient(185deg,  #f14646ff, #680808ff, #43ffefff )",
         color: "#fff",
         fontFamily: "'Poppins', sans-serif",
         padding: "5rem 0",
@@ -69,13 +69,13 @@ function About() {
             <h3 className="fw-bold text-warning mb-3">
               Empowering Smart IT Operations
             </h3>
-            <p className="text-white-50 fs-5 mb-4">
+            <p className="text-white fs-5 mb-4">
               Tech Mahindra’s IT Helpdesk System brings automation and agility to
               enterprise service management, ensuring faster resolutions and
               transparent communication.
             </p>
 
-            <ul className="list-unstyled text-white-50 fs-6">
+            <ul className="list-unstyled text-white fs-6">
               <li className="mb-2">
                 ✅ <strong>Automation First:</strong> AI-powered ticket routing for
                 rapid issue resolution.
@@ -94,7 +94,7 @@ function About() {
               </li>
             </ul>
 
-            <button
+            {/* <button
               className="btn btn-warning btn-lg rounded-pill px-4 mt-3 fw-semibold"
               style={{
                 color: "#212121",
@@ -104,12 +104,12 @@ function About() {
               onMouseOut={(e) => (e.currentTarget.style.background = "#ffc107")}
             >
               Learn More
-            </button>
+            </button> */}
           </div>
         </div>
 
         {/* Mission/Vision/Values */}
-        <div className="row mt-5 text-center" data-aos="fade-up">
+        <div className="row mt-5 text-center text-light " data-aos="fade-up">
           {[
             {
               title: "Our Mission",
@@ -149,7 +149,7 @@ function About() {
         </div>
 
         {/* Footer */}
-        <div className="text-center text-white-50 mt-5 pt-3">
+        <div className="text-center text-danger mt-5 pt-3">
           <hr className="border-light opacity-25" />
           <small>© 2025 Tech Mahindra Foundation | Empowering Futures with Technology</small>
         </div>

@@ -18,8 +18,16 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`✅ ${isLogin ? "Login" : "Registration"} successful!`);
-    navigate("/dashboard");
+
+    if (isLogin) {
+      // Login logic
+      alert("✅ Login successful!");
+      navigate("/dashboard");
+    } else {
+      // Signup logic
+      alert("✅ Registration successful! Please login.");
+      setIsLogin(true); // Switch back to login form instead of redirecting
+    }
   };
 
   return (
@@ -57,26 +65,17 @@ const Login = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto align-items-lg-center">
               <li className="nav-item">
-                <Link
-                  to="/about"
-                  className="nav-link text-danger fw-semibold"
-                >
+                <Link to="/about" className="nav-link text-danger fw-semibold">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/contact"
-                  className="nav-link text-danger fw-semibold"
-                >
+                <Link to="/contact" className="nav-link text-danger fw-semibold">
                   Contact
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/services"
-                  className="nav-link text-danger fw-semibold"
-                >
+                <Link to="/services" className="nav-link text-danger fw-semibold">
                   Services
                 </Link>
               </li>

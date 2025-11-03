@@ -26,7 +26,7 @@ const Contact = () => {
     <section
       className="contact-section py-5"
       style={{
-        background: "linear-gradient(185deg, #ecf3efc4, #000000ff )",
+        background: "linear-gradient(185deg,  #f14646ff, #680808ff, #43ffefff  )",
         animation: "gradientShift 8s ease infinite",
         backgroundSize: "400% 400%",
         color: "#fff",

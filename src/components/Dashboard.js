@@ -31,15 +31,23 @@ function Sidebar({ activeLink, setActiveLink }) {
         {[
           { name: "Dashboard Overview", icon: "🏠", id: "overview" },
           { name: "Analytics", icon: "📊", id: "analytics" },
-          { name: "View Tickets", icon: "🎫", id: "pending" },
+          { name: "View Tickets", icon: "🎫", id: "pendingTickets" },
         ].map((link) => (
           <li key={link.id}>
             <a
-              href={`#${link.id}`}
+              href="#"
               className={`nav-link text-white d-flex align-items-center gap-2 ${activeLink === link.id ? "active" : ""
                 }`}
-              onClick={() => setActiveLink(link.id)}
+              onClick={(e) => {
+                e.preventDefault();
+                if (link.id === "pendingTickets") {
+                  window.location.href = "/PendingTickets"; // Navigate to Tickets page
+                } else {
+                  setActiveLink(link.id);
+                }
+              }}
             >
+
               <span>{link.icon}</span>
               <span>{link.name}</span>
             </a>

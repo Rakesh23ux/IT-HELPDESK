@@ -18,10 +18,10 @@ function Services() {
     <section
       id="services"
       style={{
-        background: "linear-gradient(185deg, #ecf3efc4, #000000ff )",
+        background: "linear-gradient(185deg, #f14646ff, #6d1212ff, #43ffefff )",
         padding: "4rem 0 ",
         fontFamily: "'Poppins', Arial, sans-serif",
-        color: "#212529",
+        color: "#29425aff",
       }}
     >
       <div className="container">
@@ -34,14 +34,32 @@ function Services() {
         </div>
 
         {/* Header */}
-        <div className="text-center mb-5">
-          <h1 className="fw-bold text-danger text-uppercase">
+        <div className="text-center mb-5 service-heading">
+          <h1 className="fw-bold text-white text-uppercase">
             IT Helpdesk Services
           </h1>
-          <h3 className="fw-bold text-secondary text-uppercase">
+          <h3 className="fw-bold text-white text-uppercase">
             Our Core Services
           </h3>
-          <p className="text-muted fs-5">
+
+          {/* Inline hover styles */}
+          <style jsx="true">{`
+    .service-heading:hover h1,
+    .service-heading:hover h3 {
+      transform: scale(1.05);
+      transition: all 0.4s ease;
+      text-shadow: 0 0 12px rgba(183, 28, 28, 0.6);
+      cursor: pointer;
+    }
+
+    .service-heading h1,
+    .service-heading h3 {
+      transition: all 0.4s ease;
+    }
+  `}</style>
+
+
+          <p className="text-black fs-5">
             Powering efficient IT operations with intelligent systems for
             ticket management, automation, and enterprise support.
           </p>
