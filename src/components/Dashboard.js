@@ -20,59 +20,59 @@ import PendingTickets from "./PendingTickets";
 import ResolvedTickets from "./ResolvedTickets";
 
 // Sidebar Component
-function Sidebar({ activeLink, setActiveLink }) {
-  return (
-    <div
-      className="bg-dark text-white p-4 d-flex flex-column justify-content-start sidebar"
-      style={{ minHeight: "100vh", width: "250px", position: "sticky", top: 0 }}
-    >
-      <h5 className="fw-bold text-danger mb-4 text-center">Admin Panel</h5>
-      <ul className="nav flex-column gap-3">
-        {[
-          { name: "Dashboard Overview", icon: "🏠", id: "overview" },
-          { name: "Analytics", icon: "📊", id: "analytics" },
-          { name: "View Tickets", icon: "🎫", id: "pendingTickets" },
-        ].map((link) => (
-          <li key={link.id}>
-            <a
-              href="#"
-              className={`nav-link text-white d-flex align-items-center gap-2 ${activeLink === link.id ? "active" : ""
-                }`}
-              onClick={(e) => {
-                e.preventDefault();
-                if (link.id === "pendingTickets") {
-                  window.location.href = "/PendingTickets"; // Navigate to Tickets page
-                } else {
-                  setActiveLink(link.id);
-                }
-              }}
-            >
-
-              <span>{link.icon}</span>
-              <span>{link.name}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <style jsx="true">{`
-        .nav-link {
-          padding: 10px 15px;
-          border-radius: 8px;
-          transition: all 0.2s;
-        }
-        .nav-link:hover {
-          background-color: #dc3545;
-          color: white;
-        }
-        .nav-link.active {
-          background-color: #b71c1c;
-          font-weight: bold;
-        }
-      `}</style>
-    </div>
-  );
-}
+// function Sidebar({ activeLink, setActiveLink }) {
+// return (
+// <div
+// className="bg-dark text-white p-4 d-flex flex-column justify-content-start sidebar"
+// style={{ minHeight: "100vh", width: "250px", position: "sticky", top: 0 }}
+// >
+{/* <h5 className="fw-bold text-danger mb-4 text-center">Admin Panel</h5> */ }
+{/* <ul className="nav flex-column gap-3"> */ }
+{/* {[ */ }
+// { name: "Dashboard Overview", icon: "🏠", id: "overview" },
+// { name: "Analytics", icon: "📊", id: "analytics" },
+// { name: "View Tickets", icon: "🎫", id: "pendingTickets" },
+// ].map((link) => (
+// <li key={link.id}>
+{/* <a */ }
+// href="#"
+// className={`nav-link text-white d-flex align-items-center gap-2 ${activeLink === link.id ? "active" : ""
+// }`}
+// onClick={(e) => {
+// e.preventDefault();
+// if (link.id === "pendingTickets") {
+// window.location.href = "/PendingTickets"; 
+// } else {
+// setActiveLink(link.id);
+// }
+// }}
+// >
+{/*  */ }
+{/* <span>{link.icon}</span> */ }
+{/* <span>{link.name}</span> */ }
+{/* </a> */ }
+{/* </li> */ }
+// ))}
+{/* </ul> */ }
+{/*  */ }
+{/* <style jsx="true">{` */ }
+// .nav-link {
+// padding: 10px 15px;
+// border-radius: 8px;
+// transition: all 0.2s;
+// }
+// .nav-link:hover {
+// background-color: #dc3545;
+// color: white;
+// }
+// .nav-link.active {
+// background-color: #b71c1c;
+// font-weight: bold;
+// }
+// `}</style>
+{/* </div> */ }
+//   );
+// }
 
 
 
@@ -90,6 +90,9 @@ function Dashboard() {
     { id: "#A103", title: "VPN Issue", desc: "VPN connection drops randomly", status: "In-progress", priority: "Medium" },
     { id: "#A104", title: "Slow Internet", desc: "Network latency detected", status: "In-progress", priority: "Medium" },
     { id: "#A105", title: "Printer Error", desc: "HP LaserJet offline", status: "In-progress", priority: "Low" },
+    { id: "#A106", title: "Access Denied", desc: "User access revoked unexpectedly", status: "In-progress", priority: "High" },
+    { id: "#A107", title: "Outlook Sync", desc: "Emails not syncing properly", status: "In-progress", priority: "Medium" },
+    { id: "#A108", title: "WiFi Drop", desc: "Connection unstable in 2nd floor", status: "In-progress", priority: "Medium" },
     { id: "#A106", title: "Access Denied", desc: "User access revoked unexpectedly", status: "In-progress", priority: "High" },
     { id: "#A107", title: "Outlook Sync", desc: "Emails not syncing properly", status: "In-progress", priority: "Medium" },
     { id: "#A108", title: "WiFi Drop", desc: "Connection unstable in 2nd floor", status: "In-progress", priority: "Medium" },
@@ -140,7 +143,7 @@ function Dashboard() {
   return (
     <div className="d-flex">
       {/* Sidebar */}
-      <Sidebar activeLink={activeLink} setActiveLink={setActiveLink} />
+      {/* <Sidebar activeLink={activeLink} setActiveLink={setActiveLink} /> */}
 
       {/* Main Content */}
       <div className="flex-grow-1 p-4">
@@ -464,7 +467,7 @@ function Dashboard() {
             </div>
 
             {/* Modal Footer */}
-            <div className="modal-footer border-0 justify-content-center">
+            <div className="modal-footer border-0 py-4 justify-content-center">
               <button
                 className="btn btn-danger px-4 rounded-pill shadow-sm"
                 onClick={handleCloseModal}
@@ -497,6 +500,7 @@ function Dashboard() {
         border-radius: 18px;
         box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
         width: 420px;
+        padding:20px;
         max-width: 90%;
         transition: transform 0.3s ease, opacity 0.3s ease;
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -537,7 +541,7 @@ function Dashboard() {
       @media (max-width: 576px) {
         .custom-modal {
           width: 90%;
-          padding: 10px;
+          padding: 20px;
         }
       }
     `}</style>
